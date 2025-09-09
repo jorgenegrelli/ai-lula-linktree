@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap');
+
+:root {
+  --brand: #F39C12;
+  --black: #0F0F10;
+  --gray-900: #1F1F23;
+  --gray-800: #2D2D32;
+  --gray-600: #6B7280;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, var(--black) 0%, var(--gray-900) 100%);
+  color: var(--white);
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gray-900);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gray-600);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand);
+}
+
+/* Link button styles */
+@layer components {
+  .link-btn {
+    @apply block w-full p-5 mb-4 rounded-2xl text-center font-semibold text-lg transition-all duration-300 relative overflow-hidden border border-transparent;
+  }
+  
+  .link-btn::before {
+    content: '';
+    @apply absolute top-0 -left-full w-full h-full transition-all duration-500;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  }
+  
+  .link-btn:hover::before {
+    @apply left-full;
+  }
+  
+  .link-btn:hover {
+    @apply -translate-y-1;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  }
+  
+  .link-btn:active {
+    @apply translate-y-0;
+  }
+  
+  .btn-primary {
+    background: linear-gradient(135deg, var(--brand) 0%, #E67E22 100%);
+    color: var(--black);
+    box-shadow: 0 4px 15px rgba(243, 156, 18, 0.3);
+  }
+  
+  .btn-primary:hover {
+    box-shadow: 0 8px 25px rgba(243, 156, 18, 0.4);
+  }
+  
+  .btn-secondary {
+    background-color: var(--gray-800);
+    color: var(--white);
+    border: 1px solid var(--gray-600);
+  }
+  
+  .btn-secondary:hover {
+    background-color: var(--gray-600);
+    border-color: var(--brand);
+  }
+  
+  .hero-badge {
+    background: linear-gradient(135deg, var(--brand) 0%, #E67E22 100%);
+    color: var(--black);
+    @apply px-4 py-2 rounded-full text-sm font-semibold inline-block mb-4;
+  }
+  
+  .social-icon {
+    @apply w-8 h-8 transition-colors duration-300;
+    fill: var(--gray-600);
+  }
+  
+  .social-icon:hover {
+    fill: var(--brand);
+  }
+}
+
+/* Focus styles for accessibility */
+.link-btn:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+/* Loading animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

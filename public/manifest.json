@@ -1,0 +1,21 @@
+{
+  "name": "Cia da Barba - Links",
+  "short_name": "Cia da Barba",
+  "description": "Melhor barbearia por assinatura do Portão, Curitiba",
+  "start_url": "/links",
+  "display": "standalone",
+  "background_color": "#0F0F10",
+  "theme_color": "#F39C12",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

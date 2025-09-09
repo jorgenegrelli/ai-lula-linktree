@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cia da Barba - Links | Barbearia Curitiba</title>
+  <meta name="description" content="Melhor barbearia por assinatura do Portão, Curitiba. Agende seu horário ou assine nossos planos. +300 membros ativos.">
+  <meta name="keywords" content="barbearia curitiba, corte masculino, barba, assinatura, portão, cia da barba">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Cia da Barba - Links | Barbearia Curitiba">
+  <meta property="og:description" content="Melhor barbearia por assinatura do Portão, Curitiba. Agende seu horário ou assine nossos planos.">
+  <meta property="og:image" content="https://ciadabarba.com/og-links.png">
+  <meta property="og:url" content="https://ciadabarba.com/links">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cia da Barba - Links">
+  <meta name="twitter:description" content="Melhor barbearia por assinatura do Portão, Curitiba.">
+  <meta name="twitter:image" content="https://ciadabarba.com/og-links.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23F39C12' width='100' height='100' rx='20'/><text y='70' x='50' text-anchor='middle' font-size='40' fill='%230F0F10' font-family='Arial,sans-serif' font-weight='bold'>CB</text></svg>">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: '#F39C12',
+            black: '#0F0F10',
+            'gray-900': '#1F1F23',
+            'gray-800': '#2D2D32',
+            'gray-600': '#6B7280',
+            white: '#ffffff'
+          },
+          fontFamily: {
+            'inter': ['Inter', 'sans-serif'],
+            'poppins': ['Poppins', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    :root {
+      --brand: #F39C12;
+      --black: #0F0F10;
+      --gray-900: #1F1F23;
+      --gray-800: #2D2D32;
+      --gray-600: #6B7280;
+      --white: #ffffff;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, var(--black) 0%, var(--gray-900) 100%);
+      color: var(--white);
+      min-height: 100vh;
+    }
+    
+    .link-btn {
+      display: block;
+      width: 100%;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1rem;
+      border-radius: 1rem;
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid transparent;
+    }
+    
+    .link-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+      transition: left 0.5s;
+    }
+    
+    .link-btn:hover::before {
+      left: 100%;
+    }
+    
+    .link-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+    
+    .link-btn:active {
+      transform: translateY(0);
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, var(--brand) 0%, #E67E22 100%);
+      color: var(--black);
+      box-shadow: 0 4px 15px rgba(243, 156, 18, 0.3);
+    }
+    
+    .btn-primary:hover {
+      box-shadow: 0 8px 25px rgba(243, 156, 18, 0.4);
+    }
+    
+    .btn-secondary {
+      background: var(--gray-800);
+      color: var(--white);
+      border: 1px solid var(--gray-600);
+    }
+    
+    .btn-secondary:hover {
+      background: var(--gray-600);
+      border-color: var(--brand);
+    }
+    
+    .hero-badge {
+      background: linear-gradient(135deg, var(--brand) 0%, #E67E22 100%);
+      color: var(--black);
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+    
+    .qr-code {
+      background: var(--white);
+      padding: 1rem;
+      border-radius: 1rem;
+      display: inline-block;
+    }
+    
+    @media (min-width: 768px) {
+      .links-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+      }
+      
+      .link-btn-full {
+        grid-column: 1 / -1;
+      }
+    }
+    
+    .social-icon {
+      width: 2rem;
+      height: 2rem;
+      fill: var(--gray-600);
+      transition: fill 0.3s ease;
+    }
+    
+    .social-icon:hover {
+      fill: var(--brand);
+    }
+  </style>
+</head>
+
+<body class="font-inter">
+  <div class="min-h-screen flex flex-col items-center justify-center px-4 py-8">
+    
+    <!-- Header/Hero -->
+    <header class="text-center mb-8 max-w-md">
+      <div class="hero-badge">
+        Clube de Assinaturas · +300 membros
+      </div>
+      
+      <h1 class="text-4xl font-bold font-poppins mb-2 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
+        Cia da Barba
+      </h1>
+      <p class="text-xl text-gray-300 mb-1">Curitiba</p>
+      
+      <div class="mt-4 space-y-2 text-gray-300">
+        <p class="flex items-center justify-center gap-2">
+          <svg class="w-4 h-4 fill-brand" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+          </svg>
+          TER à SAB, 9h–19h
+        </p>
+        <a href="tel:+554133293438" class="flex items-center justify-center gap-2 text-brand hover:text-orange-400 transition-colors">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+          (41) 3329-3438
+        </a>
+      </div>
+    </header>
+
+    <!-- Links principais -->
+    <main class="w-full max-w-md">
+      <div class="links-grid">
+        
+        <!-- CTA Principal -->
+        <a href="https://wa.me/554133293438?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Cia%20da%20Barba" 
+           class="link-btn btn-primary link-btn-full" 
+           aria-label="Agendar horário via WhatsApp"
+           target="_blank"
+           rel="noopener">
+          <span class="flex items-center justify-center gap-2">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.531 3.506"/>
+            </svg>
+            Agendar Agora
+          </span>
+        </a>
+
+        <!-- Links secundários -->
+        <a href="https://ciadabarba.com/planos" 
+           class="link-btn btn-secondary" 
+           aria-label="Ver planos de assinatura"
+           target="_blank"
+           rel="noopener">
+          Assinar Planos
+        </a>
+
+        <a href="https://ciadabarba.com/servicos" 
+           class="link-btn btn-secondary" 
+           aria-label="Ver serviços disponíveis"
+           target="_blank"
+           rel="noopener">
+          Serviços
+        </a>
+
+        <a href="https://ciadabarba.com/equipe" 
+           class="link-btn btn-secondary" 
+           aria-label="Conheça nossa equipe"
+           target="_blank"
+           rel="noopener">
+          Nossa Equipe
+        </a>
+
+        <a href="https://goo.gl/maps/exemplo-cia-da-barba" 
+           class="link-btn btn-secondary" 
+           aria-label="Ver localização no Google Maps"
+           target="_blank"
+           rel="noopener">
+          <!-- TODO: Substituir pela URL real do Google Maps -->
+          Localização
+        </a>
+
+        <a href="https://instagram.com/ciadabarbacwb" 
+           class="link-btn btn-secondary" 
+           aria-label="Seguir no Instagram"
+           target="_blank"
+           rel="noopener">
+          <span class="flex items-center justify-center gap-2">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+            Instagram
+          </span>
+        </a>
+
+        <a href="https://beacons.ai/ciadabarbacwb" 
+           class="link-btn btn-secondary" 
+           aria-label="Ver perfil completo no Beacons"
+           target="_blank"
+           rel="noopener">
+          Todos os Links
+        </a>
+
+        <!-- TODO: Adicionar quando disponível -->
+        <!-- 
+        <a href="#" class="link-btn btn-secondary" aria-label="Promo do mês">
+          Promo do Mês
+        </a>
+        
+        <a href="#" class="link-btn btn-secondary" aria-label="Avaliações no Google">
+          Avaliações Google
+        </a>
+        -->
+
+      </div>
+    </main>
+
+    <!-- QR Code -->
+    <div class="mt-8 text-center">
+      <p class="text-gray-400 text-sm mb-2">Compartilhe este link:</p>
+      <div class="qr-code">
+        <!-- QR Code SVG simples apontando para https://ciadabarba.com/links -->
+        <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="120" height="120" fill="white"/>
+          <rect x="10" y="10" width="20" height="20" fill="black"/>
+          <rect x="40" y="10" width="10" height="10" fill="black"/>
+          <rect x="60" y="10" width="10" height="10" fill="black"/>
+          <rect x="80" y="10" width="20" height="20" fill="black"/>
+          <rect x="10" y="40" width="10" height="10" fill="black"/>
+          <rect x="30" y="40" width="10" height="10" fill="black"/>
+          <rect x="50" y="40" width="20" height="10" fill="black"/>
+          <rect x="80" y="40" width="10" height="10" fill="black"/>
+          <rect x="100" y="40" width="10" height="10" fill="black"/>
+          <rect x="10" y="60" width="10" height="10" fill="black"/>
+          <rect x="30" y="60" width="20" height="10" fill="black"/>
+          <rect x="60" y="60" width="10" height="10" fill="black"/>
+          <rect x="80" y="60" width="10" height="10" fill="black"/>
+          <rect x="100" y="60" width="10" height="10" fill="black"/>
+          <rect x="10" y="80" width="20" height="20" fill="black"/>
+          <rect x="40" y="80" width="10" height="10" fill="black"/>
+          <rect x="60" y="80" width="10" height="10" fill="black"/>
+          <rect x="80" y="80" width="20" height="20" fill="black"/>
+          <text x="60" y="115" text-anchor="middle" font-size="8" fill="black">ciadabarba.com/links</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-8 text-center text-gray-400">
+      <div class="mb-4">
+        <p class="text-sm font-medium">Bairro Portão – Curitiba, PR</p>
+        <p class="text-xs mt-1">R. Exemplo, 123 - CEP 82000-000</p>
+      </div>
+      
+      <div class="flex justify-center items-center gap-4 mb-4">
+        <a href="https://instagram.com/ciadabarbacwb" 
+           aria-label="Instagram da Cia da Barba"
+           target="_blank"
+           rel="noopener">
+          <svg class="social-icon" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </a>
+        
+        <a href="https://wa.me/554133293438" 
+           aria-label="WhatsApp da Cia da Barba"
+           target="_blank"
+           rel="noopener">
+          <svg class="social-icon" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.531 3.506"/>
+          </svg>
+        </a>
+      </div>
+      
+      <p class="text-xs">© 2025 Cia da Barba. Todos os direitos reservados.</p>
+      <p class="text-xs mt-1">Desenvolvido com ❤️ para barbudos de Curitiba</p>
+    </footer>
+
+  </div>
+
+  <!-- Analytics placeholder -->
+  <!-- TODO: Adicionar Google Analytics ou similar se necessário -->
+  
+</body>
+</html>
